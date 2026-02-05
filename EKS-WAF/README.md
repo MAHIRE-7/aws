@@ -12,6 +12,7 @@ The entry point, security model, and traffic flow remain the same.
 ---
 
 ## 🏗️ Architecture Diagram (Single View)
+```
                      ┌──────────────┐
                      │    User      │
                      └──────┬───────┘
@@ -43,6 +44,7 @@ The entry point, security model, and traffic flow remain the same.
           │                                      │
           │   Pods are NOT publicly accessible   │
           └────────────────────────────────────┘
+```
 
 ---
 
@@ -61,6 +63,11 @@ The entry point, security model, and traffic flow remain the same.
 
 ## 🔁 Request Flow (Important)
 
+1. **User** → **ALB** (Public Entry)
+2. **ALB** → **AWS WAF** (Security Filtering)
+3. **WAF** → **EKS Ingress** (Clean Traffic)
+4. **Ingress** → **Service** (Internal Routing)
+5. **Service** → **Pods** (Application)
 
 ✔️ User never accesses Pods or Nodes directly  
 ✔️ Single controlled entry point

@@ -15,6 +15,7 @@ This repository demonstrates a **production-grade deployment** of a Node.js appl
 ---
 
 ## 🏗️ Architecture Diagram (Single View)
+```
                      ┌──────────────┐
                      │    User      │
                      └──────┬───────┘
@@ -47,7 +48,7 @@ This repository demonstrates a **production-grade deployment** of a Node.js appl
                 │   Docker Container       │
                 │   Node.js App (3000)     │
                 └─────────────────────────┘
-
+```
 
 ---
 
