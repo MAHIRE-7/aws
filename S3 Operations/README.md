@@ -22,6 +22,8 @@ S3 buckets never trust users directly — they trust **IAM identities**.
 
 ---
 
+
+
 ## 🏗️ Architecture Diagram (Single View)
 ```
     ┌─────────────────────────┐
